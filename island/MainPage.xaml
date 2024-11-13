@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="island.MainPage"
+             Title="Ana Sayfa">
+    <Grid>
+        <Grid RowDefinitions="Auto,*" BackgroundColor="Gray">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Image Source="ada.png" WidthRequest="200" HeightRequest="200"/>
+            <Label Text="Gökhan ADA" FontSize="20" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Bartin Üniversitesi Bilgisayar Mühendisliği" FontSize="14" HorizontalOptions="Center"/>
+            <Label Text="ÖDEV-1" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center"/>
+        </StackLayout>
+    </Grid>
+
+
+</ContentPage>

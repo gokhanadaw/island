@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="island.RenkSeciciPage">
+
+    <StackLayout Padding="20" Spacing="15">
+
+        <Label Text="Renk Seçici" FontSize="24" HorizontalOptions="Center" TextColor="#333" />
+
+        <StackLayout>
+            <Label Text="Kırmızı" FontSize="15" TextColor="Red" />
+            <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="OnColorSliderChanged" 
+                    MinimumTrackColor="Red" ThumbColor="Red"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="Mavi" FontSize="15" TextColor="Blue" />
+            <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="OnColorSliderChanged"
+                    MinimumTrackColor="Blue" ThumbColor="Blue"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Label Text="Yeşil" FontSize="15" TextColor="Green" />
+            <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="OnColorSliderChanged"
+                    MinimumTrackColor="Green" ThumbColor="Green"/>
+        </StackLayout>
+
+        <Frame x:Name="ColorDisplayFrame" Padding="20" CornerRadius="10" HeightRequest="100" VerticalOptions="Center" BackgroundColor="#000000">
+            <Label x:Name="ColorCodeLabel" Text="Renk Kodu: #000000" FontSize="14" HorizontalOptions="Center" VerticalOptions="Center" TextColor="White"/>
+        </Frame>
+
+        <Button Text="Renk Kodunu Kopyala" Clicked="OnCopyColorCode" BackgroundColor="#4CAF50" TextColor="White" CornerRadius="10" 
+        HorizontalOptions="Center" WidthRequest="180" />
+
+        <Button Text="Rastgele Renk Seç" Clicked="OnRandomColor" BackgroundColor="#2196F3" TextColor="White" CornerRadius="10" 
+        HorizontalOptions="Center" WidthRequest="150" />
+    </StackLayout>
+</ContentPage>
